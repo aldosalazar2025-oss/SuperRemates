@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Super Remates Acobamba" />
+    <meta
+      property="og:description"
+      content="Ofertas y remates en Acobamba. Pide fácil por WhatsApp."
+    />
+    <meta property="og:image" content="https://dulcet-kitsune-4614df.netlify.app/img/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Super Remates Acobamba</title>
+    <meta name="theme-color" content="#160b35" />
+    <meta
+      name="description"
+      content="Ofertas y remates en Acobamba: tecnología, hogar, accesorios y más."
+    />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="img/favicon-192.png"
+    />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="wrap nav">
+        <div class="brand">
+          <img
+            class="logo"
+            src="img/logo.png"
+            alt="Super Remates Acobamba"
+            width="64"
+            height="64"
+          /><span class="tx"
+            ><span id="sName">SUPER REMATES</span><small>ACOBAMBA</small></span
+          >
+        </div>
+        <div style="display: flex; gap: 10px">
+          <button
+            id="admBtn"
+            class="hidden"
+            data-act="admin"
+            aria-label="Administrador"
+          >
+            ⚙️</button
+          ><button id="cartBtn" data-act="cart" aria-label="Carrito">
+            🛒<b id="cnt">0</b>
+          </button>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="wrap">
+        <span class="pill">🔥 OFERTAS Y REMATES</span>
+        <h1>¡Grandes ofertas en Acobamba!</h1>
+        <p>
+          Tecnología, hogar, electrodomésticos, accesorios y mucho más. Pide
+          fácil por WhatsApp.
+        </p>
+        <a class="cta" href="#catalogo">Ver catálogo</a>
+      </div>
+    </section>
+    <main class="wrap" id="catalogo">
+      <div class="tools">
+        <input
+          id="q"
+          type="search"
+          placeholder="🔎 Buscar productos..."
+        /><select id="sort">
+          <option value="">Destacados</option>
+          <option value="a">Precio: menor a mayor</option>
+          <option value="d">Precio: mayor a menor</option>
+          <option value="n">Nombre A-Z</option>
+        </select>
+      </div>
+      <div class="chips" id="chips"></div>
+      <div class="grid" id="grid"></div>
+    </main>
+    <footer>
+      <div class="wrap fg">
+        <div class="fcol">
+          <div class="fbrand">
+            <img
+              src="img/logo.png"
+              alt=""
+              width="56"
+              height="56"
+              loading="lazy"
+            />
+            <b>SUPER REMATES<br />ACOBAMBA</b>
+          </div>
+          <p>Ofertas y remates en tecnología, hogar, accesorios y mucho más.</p>
+          <div class="social" id="social"></div>
+        </div>
+        <div class="fcol">
+          <h4>Explora</h4>
+          <a href="#catalogo">Catálogo</a>
+          <a href="#catalogo" data-act="ofertas">Ofertas</a>
+          <a href="#" data-act="cart">Mi carrito</a>
+        </div>
+        <div class="fcol">
+          <h4>Contáctanos</h4>
+          <p>
+            📍 Av. San Martín, Acobamba 09381<br />Stand 1, Mercado Chanín –
+            primer piso
+          </p>
+          <p id="horRow" class="hidden">🕒 <span id="hor"></span></p>
+          <p>📱 <a id="tel" href="#"></a></p>
+          <a class="wabtn" id="waFoot" target="_blank" rel="noopener"
+            >💬 Escríbenos por WhatsApp</a
+          >
+        </div>
+        <div class="fcol">
+          <h4>Cómo comprar</h4>
+          <ol class="steps">
+            <li>Elige tus productos</li>
+            <li>Agrégalos al carrito</li>
+            <li>Envía tu pedido por WhatsApp</li>
+            <li>Recoge en tienda o pide delivery</li>
+          </ol>
+        </div>
+      </div>
+      <div class="fbar">
+        <div class="wrap">
+          © <span id="yr"></span> Super Remates Acobamba · Todos los derechos
+          reservados
+        </div>
+      </div>
+    </footer>
+    <div id="waMenu" class="wamenu hidden"></div>
+    <a class="wa" id="waF" target="_blank" rel="noopener" aria-label="WhatsApp"
+      ><svg viewBox="0 0 32 32">
+        <path
+          d="M16 3a13 13 0 0 0-11 19.7L3 29l6.5-2A13 13 0 1 0 16 3zm7.5 18.4c-.3.9-1.8 1.7-2.5 1.7-.6.1-1.4.1-2.3-.1-.5-.2-1.200-.4-2-.8-3.600-1.600-5.900-5.200-6.100-5.400-.2-.2-1.400-1.900-1.400-3.600s.9-2.500 1.200-2.900c.3-.3.700-.4.900-.4h.7c.2 0 .5-.1.800.6l1.100 2.700c.1.200.1.400 0 .6l-.5.700-.4.500c-.2.200-.3.400-.1.700.2.300.9 1.500 2 2.400 1.400 1.200 2.500 1.600 2.900 1.800.3.200.5.100.7-.1l1-1.200c.2-.3.500-.2.800-.1l2.500 1.200c.3.100.5.200.6.400.1.100.1.800-.2 1.700z"
+        /></svg
+    ></a>
+    <div class="toast" id="toast"></div>
+
+    <dialog id="dProd" class="wide">
+      <div class="dp">
+        <button class="x" data-act="close">×</button>
+        <div id="pBody"></div>
+      </div>
+    </dialog>
+    <dialog id="dCart" class="drawer">
+      <div class="dr">
+        <div class="dr-head">
+          <button class="back" data-act="close" aria-label="Volver">←</button>
+          <h2>Carrito de compras</h2>
+        </div>
+        <button class="link" data-act="clear">Vaciar carrito</button>
+        <div class="dr-body">
+          <div id="cItems"></div>
+          <div class="f cust">
+            <input id="cName" placeholder="Tu nombre" autocomplete="name" />
+            <select
+              id="cWa"
+              class="hidden"
+              aria-label="Enviar pedido a"
+            ></select>
+            <select id="cMode">
+              <option>Recojo en tienda</option>
+              <option>Delivery</option>
+            </select>
+            <input id="cNote" placeholder="Dirección o nota (opcional)" />
+          </div>
+        </div>
+        <button class="bar" data-act="wa">
+          <span class="n" id="cNum">0</span><span>Pedir por WhatsApp</span
+          ><b id="cTot"></b><i>›</i>
+        </button>
+      </div>
+    </dialog>
+
+    <dialog id="dAdmin">
+      <div class="dp">
+        <button class="x" data-act="close">×</button>
+        <form id="login" class="f">
+          <h2>⚙️ Administrador</h2>
+          <input
+            id="em"
+            type="email"
+            placeholder="Correo"
+            autocomplete="username"
+          /><input
+            id="pw"
+            type="password"
+            placeholder="Contraseña"
+            autocomplete="current-password"
+          /><button class="add">Ingresar</button
+          ><small id="lmsg" style="color: var(--mut)"></small>
+        </form>
+        <div id="panel" class="hidden">
+          <h2>Panel de administración</h2>
+          <div class="tabs">
+            <button class="chip on" data-act="tab" data-id="tP">
+              Productos</button
+            ><button class="chip" data-act="tab" data-id="tC">Categorías</button
+            ><button class="chip" data-act="tab" data-id="tS">Tienda</button>
+          </div>
+          <section id="tP">
+            <form id="fP" class="f">
+              <input type="hidden" name="id" /><input
+                name="name"
+                placeholder="Nombre del producto"
+                required
+              />
+              <select name="cat" id="selCat" required></select>
+              <div class="f2">
+                <input
+                  name="price"
+                  type="number"
+                  step=".01"
+                  min="0"
+                  placeholder="Precio S/"
+                  required
+                /><input
+                  name="old"
+                  type="number"
+                  step=".01"
+                  min="0"
+                  placeholder="Precio anterior (oferta)"
+                />
+              </div>
+              <input
+                name="stock"
+                type="number"
+                min="0"
+                placeholder="Stock"
+                required
+              /><textarea
+                name="desc"
+                rows="3"
+                placeholder="Descripción / información"
+              ></textarea>
+              <label
+                >📷 Foto (galería o cámara)<input
+                  type="file"
+                  id="file"
+                  accept="image/*" /></label
+              ><img id="prev" class="prev" alt="" /><input
+                type="hidden"
+                name="image"
+              />
+              <label class="ck"
+                ><input type="checkbox" name="featured" /> ⭐ Producto
+                destacado</label
+              ><button class="add">Guardar producto</button
+              ><button type="button" class="sec" data-act="resetP">
+                Limpiar
+              </button>
+            </form>
+            <div id="lP"></div>
+          </section>
+          <section id="tC" class="hidden">
+            <form id="fC" class="f">
+              <input type="hidden" name="id" /><input
+                name="name"
+                placeholder="Nombre de categoría"
+                required
+              /><input name="icon" placeholder="Ícono, ej. 📱" /><button
+                class="add"
+              >
+                Guardar categoría</button
+              ><button type="button" class="sec" data-act="resetC">
+                Limpiar
+              </button>
+            </form>
+            <div id="lC"></div>
+          </section>
+          <section id="tS" class="hidden">
+            <form id="fS" class="f">
+              <input name="name" placeholder="Nombre de la tienda" />
+              <div class="wablock">
+                <b>Números de WhatsApp</b>
+                <small
+                  >Elige para qué sirve cada número: consultas (botón flotante y
+                  pie) y/o pedidos (carrito).</small
+                >
+                <div id="waAdmin"></div>
+                <button type="button" class="sec" data-act="addWa">
+                  ➕ Agregar WhatsApp
+                </button>
+              </div>
+              <input
+                name="hor"
+                placeholder="Horario, ej. Lun a Sáb 9am - 8pm"
+              /><input
+                name="fb"
+                placeholder="Enlace de Facebook (opcional)"
+              /><input
+                name="tt"
+                placeholder="Enlace de TikTok (opcional)"
+              /><button class="add">Guardar</button>
+            </form>
+            <div class="f" style="margin-top: 16px">
+              <button class="sec" data-act="backup">
+                ⬇️ Descargar copia de seguridad
+              </button>
+              <label class="sec" style="text-align: center; cursor: pointer"
+                >⬆️ Restaurar copia
+                <input id="restore" type="file" accept=".json" hidden />
+              </label>
+            </div>
+          </section>
+          <button
+            class="sec"
+            data-act="logout"
+            style="width: 100%; margin-top: 14px"
+          >
+            Cerrar sesión
+          </button>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="js/supabase-config.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

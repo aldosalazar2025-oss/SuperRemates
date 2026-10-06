@@ -1,0 +1,27 @@
+SUPER REMATES ACOBAMBA (V14: Netlify + Supabase, todo gratis)
+
+ESTRUCTURA
+  index.html              estructura de la página
+  css/style.css           estilos
+  js/app.js               catálogo, carrito, admin y conexión a Supabase
+  js/supabase-config.js   tus claves de Supabase (único archivo a editar)
+  supabase-setup.sql      script que crea tablas, seguridad y bucket de fotos
+  img/                    logo y favicon
+
+PRUEBA LOCAL: abre index.html. Admin: contraseña admin123 (solo guarda en ese navegador).
+
+PASOS PARA LA TIENDA REAL
+1. supabase.com > New project (anota la contraseña de la base de datos).
+2. Authentication > Users > Add user > Create new user: TU correo y contraseña (marca Auto Confirm).
+   Usa el correo en minúsculas.
+3. Authentication > Sign In / Providers: DESACTIVA "Allow new users to sign up" (para que nadie más cree cuentas).
+4. SQL Editor: abre supabase-setup.sql, cambia TU_CORREO por tu correo (4 veces), pega todo y pulsa Run.
+5. Project Settings > API: copia "Project URL" y la clave "anon public" en js/supabase-config.js.
+6. Publicar: app.netlify.com/drop > arrastra la carpeta completa del proyecto.
+
+AL PUBLICAR
+- Cambia TU-DOMINIO en index.html (etiqueta og:image) por tu dirección real (para WhatsApp).
+- Admin: tudominio/#admin o toca 5 veces el logo.
+- Cada producto tiene enlace propio: tudominio/#p=ID
+- Admin > Tienda: descargar y restaurar copia de seguridad (las fotos antiguas se restauran igual).
+- Las fotos nuevas se suben a Supabase Storage (1 GB gratis). Los proyectos gratis de Supabase se pausan tras ~1 semana sin visitas; se reactivan con un clic.
